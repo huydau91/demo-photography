@@ -1,14 +1,23 @@
-.header {
-    // position: relative;
+.social-menu {
+    .social-item {
+        position: relative;
+        height: 30px; // IE8
+        height: 3rem;
+        width: 30px; // IE8
+        width: 3rem;
+        &:hover {
+            @extend %social-icon-hover;
+        }
+    }
 }
-// .social-menu, .action-sidebar {
-//     position: absolute;
-//     top: 18%;
-// }
-// .action-sidebar {
-//     right: 0;
-//     cursor: pointer;
-// }
+.action-sidebar {
+    position: relative;
+    height: 30px; // IE8
+    height: 3rem;
+    width: 30px; // IE8
+    width: 3rem;
+    cursor: pointer;
+}
 .main-menu {
     .menu-item {
         .menu-link {
@@ -19,5 +28,18 @@
                 border-bottom: 1px solid #333333;
             }
         }
+        &:hover {
+            background-color: rgba(211, 211, 211, .4);
+            border-radius: 5px;
+        }
     }
+}
+$background: rgb(43, 0, 197);
+
+%social-icon-hover {
+    border-radius: 100%;
+    color: $background; // IE8
+    fill: $background;
+    transform: scale(1.25);
+    transition: background-color .5s, transform .5s ease-out;
 }
