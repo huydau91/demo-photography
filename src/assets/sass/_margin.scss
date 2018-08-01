@@ -1,0 +1,6 @@
+@for $i from 1 through 5 {
+    .mx-#{$i} {
+        margin-left: $i*.25rem;
+        margin-right: $i*.25rem;
+    }
+}

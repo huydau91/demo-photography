@@ -1,0 +1,23 @@
+.header {
+    // position: relative;
+}
+// .social-menu, .action-sidebar {
+//     position: absolute;
+//     top: 18%;
+// }
+// .action-sidebar {
+//     right: 0;
+//     cursor: pointer;
+// }
+.main-menu {
+    .menu-item {
+        .menu-link {
+            color: #333333;
+            text-decoration: none;
+            cursor: pointer;
+            &.active {
+                border-bottom: 1px solid #333333;
+            }
+        }
+    }
+}

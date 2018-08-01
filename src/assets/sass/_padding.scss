@@ -1,0 +1,32 @@
+@for $i from 1 through 5 {
+    .p-#{$i} {
+        padding: $i*.25rem;
+    }
+}
+@for $i from 1 through 5 {
+    .px-#{$i} {
+        padding-left: $i*.25rem;
+        padding-right: $i*.25rem;
+    }
+}
+@for $i from 1 through 5 {
+    .py-#{$i} {
+        padding-top: $i*.25rem;
+        padding-bottom: $i*.25rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    @for $i from 1 through 5 {
+        .p-md-#{$i} {
+            padding: $i*.25rem;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    @for $i from 1 through 5 {
+        .px-xl-#{$i} {
+            padding-left: $i*.25rem;
+            padding-right: $i*.25rem;
+        }
+    }
+}
