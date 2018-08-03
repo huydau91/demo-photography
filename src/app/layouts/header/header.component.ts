@@ -7,16 +7,9 @@ import { $ } from 'protractor';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
-    let headerSticky = false;
-    window.onscroll = function() {
-      if (window.scrollY > 100) {
-        headerSticky = true;
-      }
-    };
   }
 
 }
