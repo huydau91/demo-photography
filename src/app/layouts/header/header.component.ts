@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,12 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let headerSticky = false;
+    window.onscroll = function() {
+      if (window.scrollY > 100) {
+        headerSticky = true;
+      }
+    };
   }
 
 }

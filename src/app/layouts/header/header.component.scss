@@ -1,10 +1,10 @@
 .social-menu {
     .social-item {
         position: relative;
-        height: 30px; // IE8
-        height: 3rem;
-        width: 30px; // IE8
-        width: 3rem;
+        height: 25px; // IE8
+        height: 2.5rem;
+        width: 25px; // IE8
+        width: 2.5rem;
         &:hover {
             @extend %social-icon-hover;
         }
@@ -12,27 +12,36 @@
 }
 .action-sidebar {
     position: relative;
-    height: 30px; // IE8
-    height: 3rem;
-    width: 30px; // IE8
-    width: 3rem;
+    height: 25px; // IE8
+    height: 2.5rem;
+    width: 25px; // IE8
+    width: 2.5rem;
     cursor: pointer;
 }
-.main-menu {
-    .menu-item {
-        .menu-link {
-            color: #333333;
-            text-decoration: none;
-            cursor: pointer;
-            &.active {
-                border-bottom: 1px solid #333333;
-            }
-        }
-        &:hover {
-            background-color: rgba(211, 211, 211, .4);
-            border-radius: 5px;
+.menu-item {
+    .menu-link {
+        color: #333333;
+        text-decoration: none;
+        cursor: pointer;
+        &.active {
+            border-bottom: 1px solid #333333;
         }
     }
+    &:hover {
+        background-color: rgba(211, 211, 211, .4);
+        border-radius: 5px;
+    }
+}
+.header-sticky {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(51,51,51,0.1);
+}
+.show {
+    display: block;
 }
 $background: rgb(43, 0, 197);
 
