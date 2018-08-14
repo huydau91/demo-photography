@@ -12,6 +12,5 @@ export class SidebarComponent implements OnInit {
   }
 
   toggle(sideBarTus) {
-    console.log(sideBarTus);
   }
 }
