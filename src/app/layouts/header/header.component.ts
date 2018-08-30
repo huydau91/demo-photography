@@ -1,5 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'events';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,20 +6,17 @@ import { EventEmitter } from 'events';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() sideBarChange = new EventEmitter();
-  sideBarTus = 'open';
-
+  sideBarTus: Boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggle() {
-    if (this.sideBarTus === 'open') {
-      this.sideBarTus = 'close';
-    } else {
-      this.sideBarTus = 'open';
-    }
-    this.sideBarChange.emit(this.sideBarTus);
+  openSideBar() {
+    this.sideBarTus = !this.sideBarTus;
+  }
+
+  getChange(event: Boolean) {
+    this.sideBarTus = event;
   }
 }

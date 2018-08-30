@@ -1,9 +1,71 @@
-<div class="side-bar" [ngClass]="{'side-bar-open': openSideBar == true}">
-  <div class="side-bar-content pt-3">
-    <div class="side-bar-close">
-      <svg viewBox="0 0 1216 1312" class="side-bar-close-icon"><path d="M1202 1066q0 40-28 68l-136 136q-28 28-68 28t-68-28L608 976l-294 294q-28 28-68 28t-68-28L42 1134q-28-28-28-68t28-68l294-294L42 410q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68L880 704l294 294q28 28 28 68z" fill="black"/></svg>
+<div class="sidebar sidebar-open" *ngIf="sideBarTus">
+  <div class="sidebar-content pt-3">
+    <div class="sidebar-close clearfix p-2">
+      <div class="float-right">
+        <svg viewBox="0 0 1216 1312" class="sidebar-close-icon" (click)="closeSideBar($event)"><path d="M1202 1066q0 40-28 68l-136 136q-28 28-68 28t-68-28L608 976l-294 294q-28 28-68 28t-68-28L42 1134q-28-28-28-68t28-68l294-294L42 410q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68L880 704l294 294q28 28 28 68z" fill="black"/></svg>
+      </div>
     </div>
-    <p>dsadsadsadsa</p>
+    <div class="social-block mx-4 mb-5">
+      <h4 class="social-title text-uppercase mb-4">my instagram</h4>
+      <div class="row mx-0">
+        <div class="col-4 pl-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-4 px-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-4 pr-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-4 pl-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-4 px-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-4 pr-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-4 pl-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-4 px-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-4 pr-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="social-block mx-4">
+      <h4 class="social-title text-uppercase">my flickr photos</h4>
+      <div class="row mx-0">
+        <div class="col-3 pl-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-3 pl-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-3 px-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-3 pr-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-3 pl-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-3 pl-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-3 px-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+        <div class="col-3 pr-0 mb-2">
+          <img src="../../../assets/img/albums/hvhc/1.jpg" class="social-thumb w-100 h-100" alt="">
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="side-bar-overlay" (click)="toggle()"></div>
+  <div class="sidebar-overlay" (click)="closeSideBar($event)"></div>
 </div>
