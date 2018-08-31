@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +9,7 @@ export class SidebarComponent implements OnInit {
   @Input() sideBarTus: Boolean =  false;
   @Output() changeTus = new EventEmitter();
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
   }
@@ -17,5 +17,7 @@ export class SidebarComponent implements OnInit {
   closeSideBar(event) {
     this.sideBarTus = !this.sideBarTus;
     this.changeTus.emit();
+    this.renderer.removeClass(document.body, 'sidebar-shadow');
+    this.renderer.removeStyle(document.body, 'padding-right');
   }
 }

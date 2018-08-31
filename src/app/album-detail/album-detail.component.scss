@@ -1,11 +1,17 @@
-.footer {
+.album-detail {
     position: relative;
     padding-top: 50px;
     margin-bottom: 10px;
     font-size: 1.2rem;
     line-height: 1.6;
-    .footer-note {
+    .album-info,.album-meta {
         font-family: 'Yanone';
+    }
+    .album-meta {
+        color: #d3d3d3;
+    }
+    .album-img {
+        cursor: zoom-in;
     }
     &:before {
         content: "";

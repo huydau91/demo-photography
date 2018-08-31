@@ -1,29 +1,20 @@
-.social-menu {
-    .social-item {
-        position: relative;
-        height: 25px; // IE8
-        height: 2.5rem;
-        width: 25px; // IE8
-        width: 2.5rem;
-        &:hover {
-            @extend %social-icon-hover;
-        }
-    }
-}
+$background: rgb(43, 0, 197);
+
 .action-sidebar {
-    position: relative;
-    height: 25px; // IE8
-    height: 2.5rem;
-    width: 25px; // IE8
-    width: 2.5rem;
     cursor: pointer;
+}
+.social-item {
+    color: #333333;
+    &:hover {
+        @extend %social-icon-hover;
+    }
 }
 .menu-item {
     .menu-link {
         color: #333333;
         text-decoration: none;
         cursor: pointer;
-        &.active {
+        &.is-active {
             border-bottom: 1px solid #333333;
         }
     }
@@ -42,12 +33,11 @@
 .show {
     display: block;
 }
-$background: rgb(43, 0, 197);
 
 %social-icon-hover {
     border-radius: 100%;
     color: $background; // IE8
     fill: $background;
-    transform: scale(1.25);
-    transition: background-color .5s, transform .5s ease-out;
+    transform: scale(1.25, 1.25);
+    transition: background-color .5s, transform .25s ease-out;
 }
